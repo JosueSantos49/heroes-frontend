@@ -1,0 +1,8 @@
+.hereos li.selected {
+  background-color: black;
+  color: aliceblue;
+}
+
+.hereos {
+  cursor: pointer;
+}
