@@ -9,6 +9,7 @@ import { MessageService } from '../message.service';
   styleUrls: ['./heroes.component.css'],
 })
 export class HeroesComponent implements OnInit {
+  displayedColumns: string[] = ['id', 'name'];
   hereos: Hero[] = [];
 
   constructor(private heroService: HeroService) {}
