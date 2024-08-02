@@ -7,9 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
 import { CoreModule } from './core/core.module';
-import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { HeroesComponent } from './heroes/components/heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroesDetailComponent } from './heroes/components/heroes-detail/heroes-detail.component';
 
 @NgModule({
   declarations: [

@@ -6,7 +6,9 @@ import { MaterialModule } from '../core/material/material.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [
+    //DashboardComponent
+  ],
   imports: [
     CommonModule,
     //DashboardRoutingModule,
