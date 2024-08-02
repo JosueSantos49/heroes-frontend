@@ -1,31 +1,34 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
-import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MessagesComponent } from './messages/messages.component';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppComponent } from './app.component';
+import { ToolbarComponent } from './core/components/toolbar/toolbar.component';
+import { CoreModule } from './core/core.module';
+import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
+import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     HeroesDetailComponent,
-    MessagesComponent,
+    ToolbarComponent,
     DashboardComponent,
   ],
   imports: [
+    // @Angular
     BrowserModule,
-    FormsModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
+    FormsModule,
+
+    // App
+    CoreModule,
     AppRoutingModule,
-    MaterialModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
