@@ -10,15 +10,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 const MODULE = [
-  MatToolbarModule,
   MatButtonModule,
+  MatToolbarModule,
+  MatCardModule,
   MatExpansionModule,
   MatIconModule,
-  MatTooltipModule,
-  MatCardModule,
-  MatListModule,
   MatInputModule,
+  MatListModule,
   MatTableModule,
+  MatTooltipModule,
 ];
 
 @NgModule({
