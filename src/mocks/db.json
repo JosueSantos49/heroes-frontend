@@ -1,5 +1,5 @@
 {
-  "hereos": [
+  "heroes": [
     { "id": 1, "name": "Wolverine" },
     { "id": 2, "name": "Homem Aranha" },
     { "id": 3, "name": "Batman" },
