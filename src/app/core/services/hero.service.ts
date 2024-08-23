@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HEROES } from './mock-heroes';
 import { Hero } from '../models/hero.model';
-import { Observable, of, tap } from 'rxjs';
+import { finalize, Observable, of, tap } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HeroService {
-  private heroesUrl = 'api/heroes';
+  private heroesUrl = `${environment.baseUrl}/heroes`;
+  //private heroesUrl = 'api/heroes';
+
+  loading = false;
 
   constructor(
     private http: HttpClient,
@@ -18,9 +22,12 @@ export class HeroService {
 
   //GET /heroes
   getHeroes(): Observable<Hero[]> {
-    return this.http
-      .get<Hero[]>(this.heroesUrl)
-      .pipe(tap((heroes) => this.log(`buscou ${heroes.length} hero(es)`)));
+    this.loading = true;
+
+    return this.http.get<Hero[]>(this.heroesUrl).pipe(
+      tap((heroes) => this.log(`buscou ${heroes.length} hero(es)`)),
+      finalize(() => (this.loading = false))
+    );
 
     /*const heroes = of(HEROES);
     this.log('busca heroes');

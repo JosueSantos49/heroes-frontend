@@ -1,5 +1,9 @@
 # HeroesFrontend
 
+Subir front-end: ng s ou ng server
+
+Subir back-end: npm run backend
+
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 15.2.6.
 
 ## Servidor de desenvolvimento
