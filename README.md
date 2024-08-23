@@ -1,8 +1,15 @@
-# HeroesFrontend
+# Aplicação Heroes-Frontend
 
+Rodar o projeto em Desenvolvimento:
 Subir front-end: ng s ou ng server
-
 Subir back-end: npm run backend
+
+Exemplos para criar componentes (Comando tipo caminho/nome-componete):
+ng g c core/components/loading
+ng g s core/services/loading --skip-tests
+ng g interceptor core/interceptors/loading --skip-tests
+
+O parâmetro (--skip-tests) ao criar o componente não cria o arquivo de teste
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 15.2.6.
 
